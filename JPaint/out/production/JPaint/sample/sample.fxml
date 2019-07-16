@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+                  <MenuItem mnemonicParsing="false" onAction="#open" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#toFile" text="Save"/>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox prefHeight="257.0" prefWidth="108.0" style="-fx-background-color: #abb8cc;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox>
+               <children>
+                  <ColorPicker fx:id="colorPickerID" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="82.0">
+                      <value>
+                          <Color blue="0.0" green="0.0" red="0.0" />
+                      </value>
+                      <VBox.margin>
+                        <Insets bottom="10.0" left="12.0" top="5.0" />
+                     </VBox.margin>
+                  </ColorPicker>
+                  <HBox>
+                     <children>
+                        <RadioButton fx:id="fillRadio" mnemonicParsing="false" text="Fill">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="12.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                        <RadioButton fx:id="lineRadio" mnemonicParsing="false" text="Line">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <TextField fx:id="numFieldID" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="27.0">
+                            <text>3</text>
+                            <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="addBtn" ellipsisString="+" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="subBtn" ellipsisString="-" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0" text="Button">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#reset" text="Reset">
+                     <HBox.margin>
+                        <Insets left="9.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#undo" text="Undo">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="370.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <Canvas fx:id="canvasID" height="502.0" width="414.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
