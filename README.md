@@ -5,3 +5,5 @@ Small drawing application that allows the user to draw images using JavaFX canva
 Features: *Basic drawing tools
           *Undo option
           *Export darawing to JPEG
+          
+Made with IntelliJ and Requires javaFX library to run
